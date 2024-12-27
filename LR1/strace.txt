@@ -1,0 +1,104 @@
+daniil@daniil-NBM-WXX9:~/Desktop/Codes/LESH/LR1/rew$ strace ./parent 
+execve("./parent", ["./parent"], 0x7ffdfcc923a0 /* 81 vars */) = 0
+brk(NULL)                               = 0x59144a9d3000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b72d477b000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=68281, ...}) = 0
+mmap(NULL, 68281, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7b72d476a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=2592224, ...}) = 0
+mmap(NULL, 2609472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b72d4400000
+mmap(0x7b72d449d000, 1343488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9d000) = 0x7b72d449d000
+mmap(0x7b72d45e5000, 552960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e5000) = 0x7b72d45e5000
+mmap(0x7b72d466c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26b000) = 0x7b72d466c000
+mmap(0x7b72d467a000, 12608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b72d467a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b72d473c000
+mmap(0x7b72d4740000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7b72d4740000
+mmap(0x7b72d4764000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7b72d4764000
+mmap(0x7b72d4768000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7b72d4768000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\245\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2182752, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2227672, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b72d4000000
+mmap(0x7b72d4028000, 1662976, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7b72d4028000
+mmap(0x7b72d41be000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1be000) = 0x7b72d41be000
+mmap(0x7b72d420d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20c000) = 0x7b72d420d000
+mmap(0x7b72d4213000, 52696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b72d4213000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=964976, ...}) = 0
+mmap(NULL, 966680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b72d4313000
+mmap(0x7b72d4323000, 532480, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x7b72d4323000
+mmap(0x7b72d43a5000, 364544, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x92000) = 0x7b72d43a5000
+mmap(0x7b72d43fe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xea000) = 0x7b72d43fe000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b72d473a000
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b72d4737000
+arch_prctl(ARCH_SET_FS, 0x7b72d4737740) = 0
+set_tid_address(0x7b72d4737a10)         = 177653
+set_robust_list(0x7b72d4737a20, 24)     = 0
+rseq(0x7b72d4738060, 0x20, 0, 0x53053053) = 0
+mprotect(0x7b72d420d000, 16384, PROT_READ) = 0
+mprotect(0x7b72d43fe000, 4096, PROT_READ) = 0
+mprotect(0x7b72d4768000, 4096, PROT_READ) = 0
+mprotect(0x7b72d466c000, 45056, PROT_READ) = 0
+mprotect(0x59142e79d000, 4096, PROT_READ) = 0
+mprotect(0x7b72d47bb000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7b72d476a000, 68281)           = 0
+futex(0x7b72d467a7bc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getrandom("\xb4\x03\x39\x06\xb0\x3e\x02\xf3", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x59144a9d3000
+brk(0x59144a9f4000)                     = 0x59144a9f4000
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 54Введите имя файла для записи: ) = 54
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}) = 0
+read(0, test
+"test\n", 1024)                 = 5
+openat(AT_FDCWD, "test", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 3
+pipe2([4, 5], 0)                        = 0
+pipe2([6, 7], 0)                        = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7b72d4737a10) = 177674
+close(4)                                = 0
+close(7)                                = 0
+read(0, dgbgds
+"dgbgds\n", 1024)               = 7
+write(5, "dgbgds", 6)                   = 6
+write(5, "\n", 1)                       = 1
+read(6, "\320\236\321\210\320\270\320\261\320\272\320\260: \321\201\321\202\321\200\320\276\320\272\320\260 \320\275\320\265 "..., 1024) = 82
+write(2, "\320\236\321\210\320\270\320\261\320\272\320\260: \321\201\321\202\321\200\320\276\320\272\320\260 \320\275\320\265 "..., 82Ошибка: строка не соответствует правилу: dgbgds
+) = 82
+write(2, "\n", 1
+)                       = 1
+read(0, bfdg;
+"bfdg;\n", 1024)                = 6
+write(5, "bfdg;", 5)                    = 5
+write(5, "\n", 1)                       = 1
+read(6, ";", 1024)                      = 1
+read(0, dfg
+"dfg\n", 1024)                  = 4
+write(5, "dfg", 3)                      = 3
+write(5, "\n", 1)                       = 1
+read(6, "\320\236\321\210\320\270\320\261\320\272\320\260: \321\201\321\202\321\200\320\276\320\272\320\260 \320\275\320\265 "..., 1024) = 79
+write(2, "\320\236\321\210\320\270\320\261\320\272\320\260: \321\201\321\202\321\200\320\276\320\272\320\260 \320\275\320\265 "..., 79Ошибка: строка не соответствует правилу: dfg
+) = 79
+write(2, "\n", 1
+)                       = 1
+read(0, bdfg;
+"bdfg;\n", 1024)                = 6
+write(5, "bdfg;", 5)                    = 5
+write(5, "\n", 1)                       = 1
+read(6, ";", 1024)                      = 1
+read(0, ^Z
+[4]+  Stopped                 strace ./parent

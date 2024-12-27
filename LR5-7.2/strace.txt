@@ -1,0 +1,339 @@
+daniil@daniil-NBM-WXX9:~/Desktop/Codes/LESH/LR5-7$ strace ./distributed_system 
+execve("./distributed_system", ["./distributed_system"], 0x7ffcc5e2d500 /* 81 vars */) = 0
+brk(NULL)                               = 0x561e794d0000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b9908e8000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=68281, ...}) = 0
+mmap(NULL, 68281, PROT_READ, MAP_PRIVATE, 3, 0) = 0x70b9908d7000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzmq.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=663584, ...}) = 0
+mmap(NULL, 661336, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b990835000
+mmap(0x70b99084e000, 425984, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x70b99084e000
+mmap(0x70b9908b6000, 98304, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x81000) = 0x70b9908b6000
+mmap(0x70b9908ce000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x99000) = 0x70b9908ce000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=2592224, ...}) = 0
+mmap(NULL, 2609472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b990400000
+mmap(0x70b99049d000, 1343488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9d000) = 0x70b99049d000
+mmap(0x70b9905e5000, 552960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e5000) = 0x70b9905e5000
+mmap(0x70b99066c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26b000) = 0x70b99066c000
+mmap(0x70b99067a000, 12608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b99067a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b990807000
+mmap(0x70b99080b000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b99080b000
+mmap(0x70b99082f000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x70b99082f000
+mmap(0x70b990833000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x70b990833000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\245\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2182752, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2227672, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b990000000
+mmap(0x70b990028000, 1662976, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x70b990028000
+mmap(0x70b9901be000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1be000) = 0x70b9901be000
+mmap(0x70b99020d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20c000) = 0x70b99020d000
+mmap(0x70b990213000, 52696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b990213000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=80888, ...}) = 0
+mmap(NULL, 86208, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9907f1000
+mmap(0x70b9907f5000, 49152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b9907f5000
+mmap(0x70b990801000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x70b990801000
+mmap(0x70b990804000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x12000) = 0x70b990804000
+mmap(0x70b990806000, 192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b990806000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsodium.so.23", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=355040, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b9907ef000
+mmap(NULL, 353336, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b990798000
+mmap(0x70b9907a4000, 233472, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x70b9907a4000
+mmap(0x70b9907dd000, 65536, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x45000) = 0x70b9907dd000
+mmap(0x70b9907ed000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x55000) = 0x70b9907ed000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpgm-5.3.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=285568, ...}) = 0
+mmap(NULL, 301040, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b99074e000
+mmap(0x70b990752000, 159744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b990752000
+mmap(0x70b990779000, 102400, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x70b990779000
+mmap(0x70b990792000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x70b990792000
+mmap(0x70b990794000, 14320, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b990794000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnorm.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=366760, ...}) = 0
+mmap(NULL, 1092032, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9902f5000
+mmap(0x70b9902fe000, 274432, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x70b9902fe000
+mmap(0x70b990341000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4c000) = 0x70b990341000
+mmap(0x70b99034c000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x56000) = 0x70b99034c000
+mmap(0x70b990350000, 719296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b990350000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=342872, ...}) = 0
+mmap(NULL, 345176, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906f9000
+mmap(0x70b990705000, 241664, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x70b990705000
+mmap(0x70b990740000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x47000) = 0x70b990740000
+mmap(0x70b99074a000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x70b99074a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=964976, ...}) = 0
+mmap(NULL, 966680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b98ff13000
+mmap(0x70b98ff23000, 532480, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x70b98ff23000
+mmap(0x70b98ffa5000, 364544, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x92000) = 0x70b98ffa5000
+mmap(0x70b98fffe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xea000) = 0x70b98fffe000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmd.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=55608, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b9906f7000
+mmap(NULL, 57448, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906e8000
+mmap(0x70b9906ea000, 36864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x70b9906ea000
+mmap(0x70b9906f3000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x70b9906f3000
+mmap(0x70b9906f5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x70b9906f5000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=823584, ...}) = 0
+mmap(NULL, 822032, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b99022c000
+mmap(0x70b99024c000, 397312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000) = 0x70b99024c000
+mmap(0x70b9902ad000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x81000) = 0x70b9902ad000
+mmap(0x70b9902e6000, 61440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xba000) = 0x70b9902e6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=178728, ...}) = 0
+mmap(NULL, 176392, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906bc000
+mmap(0x70b9906c0000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b9906c0000
+mmap(0x70b9906db000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x70b9906db000
+mmap(0x70b9906e6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2a000) = 0x70b9906e6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=18584, ...}) = 0
+mmap(NULL, 20552, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906b6000
+mmap(0x70b9906b8000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x70b9906b8000
+mmap(0x70b9906b9000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x70b9906b9000
+mmap(0x70b9906ba000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x70b9906ba000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=47984, ...}) = 0
+mmap(NULL, 50128, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906a9000
+mmap(0x70b9906ac000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x70b9906ac000
+mmap(0x70b9906b2000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x70b9906b2000
+mmap(0x70b9906b4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x70b9906b4000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=22600, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b9906a7000
+mmap(NULL, 24592, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b9906a0000
+mmap(0x70b9906a2000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x70b9906a2000
+mmap(0x70b9906a4000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b9906a4000
+mmap(0x70b9906a5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x70b9906a5000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=68176, ...}) = 0
+mmap(NULL, 75912, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b99068d000
+mmap(0x70b990690000, 40960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x70b990690000
+mmap(0x70b99069a000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x70b99069a000
+mmap(0x70b99069c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x70b99069c000
+mmap(0x70b99069e000, 6280, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b99069e000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b99068b000
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b990688000
+arch_prctl(ARCH_SET_FS, 0x70b9906889c0) = 0
+set_tid_address(0x70b990688c90)         = 185196
+set_robust_list(0x70b990688ca0, 24)     = 0
+rseq(0x70b9906892e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x70b99020d000, 16384, PROT_READ) = 0
+mprotect(0x70b99069c000, 4096, PROT_READ) = 0
+mprotect(0x70b9906a5000, 4096, PROT_READ) = 0
+mprotect(0x70b9906b4000, 4096, PROT_READ) = 0
+mprotect(0x70b9906ba000, 4096, PROT_READ) = 0
+mprotect(0x70b9906e6000, 4096, PROT_READ) = 0
+mprotect(0x70b9902e6000, 53248, PROT_READ) = 0
+mprotect(0x70b9906f5000, 4096, PROT_READ) = 0
+mprotect(0x70b98fffe000, 4096, PROT_READ) = 0
+mprotect(0x70b99074a000, 8192, PROT_READ) = 0
+mprotect(0x70b990833000, 4096, PROT_READ) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b990686000
+mprotect(0x70b99066c000, 45056, PROT_READ) = 0
+mprotect(0x70b99034c000, 12288, PROT_READ) = 0
+mprotect(0x70b990792000, 4096, PROT_READ) = 0
+mprotect(0x70b9907ed000, 4096, PROT_READ) = 0
+mprotect(0x70b990804000, 4096, PROT_READ) = 0
+mprotect(0x70b9908ce000, 32768, PROT_READ) = 0
+mprotect(0x561e48cbf000, 4096, PROT_READ) = 0
+mprotect(0x70b990928000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x70b9908d7000, 68281)           = 0
+futex(0x70b99067a7bc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getrandom("\x11\x13\x8f\xeb\xfa\x0d\xb4\xe3", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x561e794d0000
+brk(0x561e794f1000)                     = 0x561e794f1000
+gettimeofday({tv_sec=1735209007, tv_usec=996374}, {tz_minuteswest=0, tz_dsttime=0}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x561e48cabb09, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x70b990045250}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x561e48cabb09, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x70b990045250}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0-11\n", 1024)                 = 5
+close(3)                                = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu/possible", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0-11\n", 1024)                 = 5
+close(3)                                = 0
+getpid()                                = 185196
+sched_getaffinity(185196, 128, [0 1 2 3 4 5 6 7 8 9 10 11]) = 8
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 594
+read(3, "", 4096)                       = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=68281, ...}) = 0
+mmap(NULL, 68281, PROT_READ, MAP_PRIVATE, 3, 0) = 0x70b9908d7000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/", {st_mode=S_IFDIR|0755, st_size=98304, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/", {st_mode=S_IFDIR|0755, st_size=98304, ...}, 0) = 0
+openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/lib/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/", 0x7ffe25769690, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+munmap(0x70b9908d7000, 68281)           = 0
+openat(AT_FDCWD, "/etc/protocols", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3144, ...}) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "# Internet (IP) protocols\n#\n# Up"..., 4096) = 3144
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+gettimeofday({tv_sec=1735209008, tv_usec=3689}, NULL) = 0
+eventfd2(0, EFD_CLOEXEC)                = 3
+fcntl(3, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+fcntl(3, F_GETFL)                       = 0x802 (flags O_RDWR|O_NONBLOCK)
+fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+getpid()                                = 185196
+getpid()                                = 185196
+getrandom("\x10\x6a\x02\x17\xd1\xbe\xad\xa4\xfb\x47\x2d\x01\xd5\x49\x2a\x00", 16, 0) = 16
+getrandom("\x2c\x71\x10\xb7\xe4\x09\x08\xe6\xfd\x34\xbe\x03\xc7\x21\x1b\x4d", 16, 0) = 16
+eventfd2(0, EFD_CLOEXEC)                = 4
+fcntl(4, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+fcntl(4, F_GETFL)                       = 0x802 (flags O_RDWR|O_NONBLOCK)
+fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+getpid()                                = 185196
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=64549, tv_nsec=23926100}) = 0
+epoll_create1(EPOLL_CLOEXEC)            = 5
+epoll_ctl(5, EPOLL_CTL_ADD, 4, {events=0, data={u32=2035164656, u64=94688884172272}}) = 0
+epoll_ctl(5, EPOLL_CTL_MOD, 4, {events=EPOLLIN, data={u32=2035164656, u64=94688884172272}}) = 0
+getpid()                                = 185196
+rt_sigaction(SIGRT_1, {sa_handler=0x70b99009e810, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x70b990045250}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x70b98f600000
+mprotect(0x70b98f601000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x70b98fe00990, parent_tid=0x70b98fe00990, exit_signal=0, stack=0x70b98f600000, stack_size=0x7ffd00, tls=0x70b98fe006c0} => {parent_tid=[185197]}, 88) = 185197
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+eventfd2(0, EFD_CLOEXEC)                = 6
+fcntl(6, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+fcntl(6, F_GETFL)                       = 0x802 (flags O_RDWR|O_NONBLOCK)
+fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+getpid()                                = 185196
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=64549, tv_nsec=26388115}) = 0
+epoll_create1(EPOLL_CLOEXEC)            = 7
+epoll_ctl(7, EPOLL_CTL_ADD, 6, {events=0, data={u32=2035165408, u64=94688884173024}}) = 0
+epoll_ctl(7, EPOLL_CTL_MOD, 6, {events=EPOLLIN, data={u32=2035165408, u64=94688884173024}}) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x70b98ec00000
+mprotect(0x70b98ec01000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x70b98f400990, parent_tid=0x70b98f400990, exit_signal=0, stack=0x70b98ec00000, stack_size=0x7ffd00, tls=0x70b98f4006c0} => {parent_tid=[185198]}, 88) = 185198
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=64549, tv_nsec=27680267}) = 0
+eventfd2(0, EFD_CLOEXEC)                = 8
+fcntl(8, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+fcntl(8, F_GETFL)                       = 0x802 (flags O_RDWR|O_NONBLOCK)
+fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+getpid()                                = 185196
+getpid()                                = 185196
+poll([{fd=8, events=POLLIN}], 1, 0)     = 0 (Timeout)
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 9
+bind(9, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+getsockname(9, {sa_family=AF_NETLINK, nl_pid=185196, nl_groups=00000000}, [12]) = 0
+sendto(9, [{nlmsg_len=20, nlmsg_type=RTM_GETLINK, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1735209008, nlmsg_pid=0}, {ifi_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+recvmsg(9, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=1444, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209008, nlmsg_pid=185196}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_LOOPBACK, ifi_index=if_nametoindex("lo"), ifi_flags=IFF_UP|IFF_LOOPBACK|IFF_RUNNING|IFF_LOWER_UP, ifi_change=0}, [[{nla_len=7, nla_type=IFLA_IFNAME}, "lo"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 0], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 65536], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GSO_IPV4_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_IPV4_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 524280], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00], [{nla_len=10, nla_type=IFLA_BROADCAST}, 00:00:00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=87857, tx_packets=87857, rx_bytes=7224420, tx_bytes=7224420, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=87857, tx_packets=87857, rx_bytes=7224420, tx_bytes=7224420, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=12, nla_type=IFLA_QDISC}, "noqueue"], [{nla_len=824, nla_type=IFLA_AF_SPEC}, [[{nla_len=12, nla_type=AF_MCTP}, [{nla_len=8, nla_type=IFLA_MCTP_NET}, 1]], [{nla_len=140, nla_type=AF_INET}, [{nla_len=136, nla_type=IFLA_INET_CONF}, [[IPV4_DEVCONF_FORWARDING-1]=0, [IPV4_DEVCONF_MC_FORWARDING-1]=0, [IPV4_DEVCONF_PROXY_ARP-1]=0, [IPV4_DEVCONF_ACCEPT_REDIRECTS-1]=1, [IPV4_DEVCONF_SECURE_REDIRECTS-1]=1, [IPV4_DEVCONF_SEND_REDIRECTS-1]=1, [IPV4_DEVCONF_SHARED_MEDIA-1]=1, [IPV4_DEVCONF_RP_FILTER-1]=0, [IPV4_DEVCONF_ACCEPT_SOURCE_ROUTE-1]=1, [IPV4_DEVCONF_BOOTP_RELAY-1]=0, [IPV4_DEVCONF_LOG_MARTIANS-1]=0, [IPV4_DEVCONF_TAG-1]=0, [IPV4_DEVCONF_ARPFILTER-1]=0, [IPV4_DEVCONF_MEDIUM_ID-1]=0, [IPV4_DEVCONF_NOXFRM-1]=1, [IPV4_DEVCONF_NOPOLICY-1]=1, [IPV4_DEVCONF_FORCE_IGMP_VERSION-1]=0, [IPV4_DEVCONF_ARP_ANNOUNCE-1]=0, [IPV4_DEVCONF_ARP_IGNORE-1]=0, [IPV4_DEVCONF_PROMOTE_SECONDARIES-1]=0, [IPV4_DEVCONF_ARP_ACCEPT-1]=0, [IPV4_DEVCONF_ARP_NOTIFY-1]=0, [IPV4_DEVCONF_ACCEPT_LOCAL-1]=0, [IPV4_DEVCONF_SRC_VMARK-1]=0, [IPV4_DEVCONF_PROXY_ARP_PVLAN-1]=0, [IPV4_DEVCONF_ROUTE_LOCALNET-1]=0, [IPV4_DEVCONF_IGMPV2_UNSOLICITED_REPORT_INTERVAL-1]=10000, [IPV4_DEVCONF_IGMPV3_UNSOLICITED_REPORT_INTERVAL-1]=1000, [IPV4_DEVCONF_IGNORE_ROUTES_WITH_LINKDOWN-1]=0, [IPV4_DEVCONF_DROP_UNICAST_IN_L2_MULTICAST-1]=0, [IPV4_DEVCONF_DROP_GRATUITOUS_ARP-1]=0, [IPV4_DEVCONF_BC_FORWARDING-1]=0, ...]]], [{nla_len=668, nla_type=AF_INET6}, [[{nla_len=8, nla_type=IFLA_INET6_FLAGS}, IF_READY], [{nla_len=20, nla_type=IFLA_INET6_CACHEINFO}, {max_reasm_len=65535, tstamp=183, reachable_time=40010, retrans_time=1000}], [{nla_len=240, nla_type=IFLA_INET6_CONF}, [[DEVCONF_FORWARDING]=0, [DEVCONF_HOPLIMIT]=64, [DEVCONF_MTU6]=65536, [DEVCONF_ACCEPT_RA]=1, [DEVCONF_ACCEPT_REDIRECTS]=1, [DEVCONF_AUTOCONF]=1, [DEVCONF_DAD_TRANSMITS]=1, [DEVCONF_RTR_SOLICITS]=-1, [DEVCONF_RTR_SOLICIT_INTERVAL]=4000, [DEVCONF_RTR_SOLICIT_DELAY]=1000, [DEVCONF_USE_TEMPADDR]=-1, [DEVCONF_TEMP_VALID_LFT]=604800, [DEVCONF_TEMP_PREFERED_LFT]=86400, [DEVCONF_REGEN_MAX_RETRY]=3, [DEVCONF_MAX_DESYNC_FACTOR]=600, [DEVCONF_MAX_ADDRESSES]=16, [DEVCONF_FORCE_MLD_VERSION]=0, [DEVCONF_ACCEPT_RA_DEFRTR]=1, [DEVCONF_ACCEPT_RA_PINFO]=1, [DEVCONF_ACCEPT_RA_RTR_PREF]=1, [DEVCONF_RTR_PROBE_INTERVAL]=60000, [DEVCONF_ACCEPT_RA_RT_INFO_MAX_PLEN]=0, [DEVCONF_PROXY_NDP]=0, [DEVCONF_OPTIMISTIC_DAD]=0, [DEVCONF_ACCEPT_SOURCE_ROUTE]=0, [DEVCONF_MC_FORWARDING]=0, [DEVCONF_DISABLE_IPV6]=0, [DEVCONF_ACCEPT_DAD]=-1, [DEVCONF_FORCE_TLLAO]=0, [DEVCONF_NDISC_NOTIFY]=0, [DEVCONF_MLDV1_UNSOLICITED_REPORT_INTERVAL]=10000, [DEVCONF_MLDV2_UNSOLICITED_REPORT_INTERVAL]=1000, ...]], [{nla_len=308, nla_type=IFLA_INET6_STATS}, [[IPSTATS_MIB_NUM]=38, [IPSTATS_MIB_INPKTS]=10, [IPSTATS_MIB_INOCTETS]=712, [IPSTATS_MIB_INDELIVERS]=10, [IPSTATS_MIB_OUTFORWDATAGRAMS]=0, [IPSTATS_MIB_OUTPKTS]=10, [IPSTATS_MIB_OUTOCTETS]=712, [IPSTATS_MIB_INHDRERRORS]=0, [IPSTATS_MIB_INTOOBIGERRORS]=0, [IPSTATS_MIB_INNOROUTES]=0, [IPSTATS_MIB_INADDRERRORS]=0, [IPSTATS_MIB_INUNKNOWNPROTOS]=0, [IPSTATS_MIB_INTRUNCATEDPKTS]=0, [IPSTATS_MIB_INDISCARDS]=0, [IPSTATS_MIB_OUTDISCARDS]=0, [IPSTATS_MIB_OUTNOROUTES]=0, [IPSTATS_MIB_REASMTIMEOUT]=0, [IPSTATS_MIB_REASMREQDS]=0, [IPSTATS_MIB_REASMOKS]=0, [IPSTATS_MIB_REASMFAILS]=0, [IPSTATS_MIB_FRAGOKS]=0, [IPSTATS_MIB_FRAGFAILS]=0, [IPSTATS_MIB_FRAGCREATES]=0, [IPSTATS_MIB_INMCASTPKTS]=0, [IPSTATS_MIB_OUTMCASTPKTS]=2, [IPSTATS_MIB_INBCASTPKTS]=0, [IPSTATS_MIB_OUTBCASTPKTS]=0, [IPSTATS_MIB_INMCASTOCTETS]=0, [IPSTATS_MIB_OUTMCASTOCTETS]=152, [IPSTATS_MIB_INBCASTOCTETS]=0, [IPSTATS_MIB_OUTBCASTOCTETS]=0, [IPSTATS_MIB_CSUMERRORS]=0, ...]], [{nla_len=60, nla_type=IFLA_INET6_ICMP6STATS}, [[ICMP6_MIB_NUM]=7, [ICMP6_MIB_INMSGS]=2, [ICMP6_MIB_INERRORS]=0, [ICMP6_MIB_OUTMSGS]=2, [ICMP6_MIB_OUTERRORS]=0, [ICMP6_MIB_CSUMERRORS]=0, [6 /* ICMP6_MIB_??? */]=0]], [{nla_len=20, nla_type=IFLA_INET6_TOKEN}, inet_pton(AF_INET6, "::")], [{nla_len=5, nla_type=IFLA_INET6_ADDR_GEN_MODE}, IN6_ADDR_GEN_MODE_EUI64]]]]], [{nla_len=36, nla_type=IFLA_MAP}, {mem_start=0, mem_end=0, base_addr=0, irq=0, dma=0, port=0}], ...]], [{nlmsg_len=1476, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209008, nlmsg_pid=185196}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_ETHER, ifi_index=if_nametoindex("wlp1s0"), ifi_flags=IFF_UP|IFF_BROADCAST|IFF_RUNNING|IFF_MULTICAST|IFF_LOWER_UP, ifi_change=0}, [[{nla_len=11, nla_type=IFLA_IFNAME}, "wlp1s0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 6], [{nla_len=5, nla_type=IFLA_LINKMODE}, 1], [{nla_len=8, nla_type=IFLA_MTU}, 1500], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 256], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 2304], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GSO_IPV4_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_IPV4_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 78], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 39], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 39], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 84:c8:a0:51:37:0e], [{nla_len=10, nla_type=IFLA_BROADCAST}, ff:ff:ff:ff:ff:ff], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=2877625, tx_packets=2373534, rx_bytes=3322814793, tx_bytes=744499470, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=30, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=2877625, tx_packets=2373534, rx_bytes=3322814793, tx_bytes=744499470, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=30, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=10, nla_type=IFLA_PERM_ADDRESS}, 84:c8:a0:51:37:0e], [{nla_len=12, nla_type=IFLA_QDISC}, "noqueue"], [{nla_len=812, nla_type=IFLA_AF_SPEC}, [[{nla_len=140, nla_type=AF_INET}, [{nla_len=136, nla_type=IFLA_INET_CONF}, [[IPV4_DEVCONF_FORWARDING-1]=0, [IPV4_DEVCONF_MC_FORWARDING-1]=0, [IPV4_DEVCONF_PROXY_ARP-1]=0, [IPV4_DEVCONF_ACCEPT_REDIRECTS-1]=1, [IPV4_DEVCONF_SECURE_REDIRECTS-1]=1, [IPV4_DEVCONF_SEND_REDIRECTS-1]=1, [IPV4_DEVCONF_SHARED_MEDIA-1]=1, [IPV4_DEVCONF_RP_FILTER-1]=2, [IPV4_DEVCONF_ACCEPT_SOURCE_ROUTE-1]=1, [IPV4_DEVCONF_BOOTP_RELAY-1]=0, [IPV4_DEVCONF_LOG_MARTIANS-1]=0, [IPV4_DEVCONF_TAG-1]=0, [IPV4_DEVCONF_ARPFILTER-1]=0, [IPV4_DEVCONF_MEDIUM_ID-1]=0, [IPV4_DEVCONF_NOXFRM-1]=0, [IPV4_DEVCONF_NOPOLICY-1]=0, [IPV4_DEVCONF_FORCE_IGMP_VERSION-1]=0, [IPV4_DEVCONF_ARP_ANNOUNCE-1]=0, [IPV4_DEVCONF_ARP_IGNORE-1]=0, [IPV4_DEVCONF_PROMOTE_SECONDARIES-1]=0, [IPV4_DEVCONF_ARP_ACCEPT-1]=0, [IPV4_DEVCONF_ARP_NOTIFY-1]=0, [IPV4_DEVCONF_ACCEPT_LOCAL-1]=0, [IPV4_DEVCONF_SRC_VMARK-1]=0, [IPV4_DEVCONF_PROXY_ARP_PVLAN-1]=0, [IPV4_DEVCONF_ROUTE_LOCALNET-1]=0, [IPV4_DEVCONF_IGMPV2_UNSOLICITED_REPORT_INTERVAL-1]=10000, [IPV4_DEVCONF_IGMPV3_UNSOLICITED_REPORT_INTERVAL-1]=1000, [IPV4_DEVCONF_IGNORE_ROUTES_WITH_LINKDOWN-1]=0, [IPV4_DEVCONF_DROP_UNICAST_IN_L2_MULTICAST-1]=0, [IPV4_DEVCONF_DROP_GRATUITOUS_ARP-1]=0, [IPV4_DEVCONF_BC_FORWARDING-1]=0, ...]]], [{nla_len=668, nla_type=AF_INET6}, [[{nla_len=8, nla_type=IFLA_INET6_FLAGS}, IF_READY], [{nla_len=20, nla_type=IFLA_INET6_CACHEINFO}, {max_reasm_len=65535, tstamp=5830539, reachable_time=23134, retrans_time=1000}], [{nla_len=240, nla_type=IFLA_INET6_CONF}, [[DEVCONF_FORWARDING]=0, [DEVCONF_HOPLIMIT]=64, [DEVCONF_MTU6]=1500, [DEVCONF_ACCEPT_RA]=0, [DEVCONF_ACCEPT_REDIRECTS]=1, [DEVCONF_AUTOCONF]=1, [DEVCONF_DAD_TRANSMITS]=1, [DEVCONF_RTR_SOLICITS]=-1, [DEVCONF_RTR_SOLICIT_INTERVAL]=4000, [DEVCONF_RTR_SOLICIT_DELAY]=1000, [DEVCONF_USE_TEMPADDR]=2, [DEVCONF_TEMP_VALID_LFT]=604800, [DEVCONF_TEMP_PREFERED_LFT]=86400, [DEVCONF_REGEN_MAX_RETRY]=3, [DEVCONF_MAX_DESYNC_FACTOR]=600, [DEVCONF_MAX_ADDRESSES]=16, [DEVCONF_FORCE_MLD_VERSION]=0, [DEVCONF_ACCEPT_RA_DEFRTR]=1, [DEVCONF_ACCEPT_RA_PINFO]=1, [DEVCONF_ACCEPT_RA_RTR_PREF]=1, [DEVCONF_RTR_PROBE_INTERVAL]=60000, [DEVCONF_ACCEPT_RA_RT_INFO_MAX_PLEN]=0, [DEVCONF_PROXY_NDP]=0, [DEVCONF_OPTIMISTIC_DAD]=0, [DEVCONF_ACCEPT_SOURCE_ROUTE]=0, [DEVCONF_MC_FORWARDING]=0, [DEVCONF_DISABLE_IPV6]=0, [DEVCONF_ACCEPT_DAD]=1, [DEVCONF_FORCE_TLLAO]=0, [DEVCONF_NDISC_NOTIFY]=0, [DEVCONF_MLDV1_UNSOLICITED_REPORT_INTERVAL]=10000, [DEVCONF_MLDV2_UNSOLICITED_REPORT_INTERVAL]=1000, ...]], [{nla_len=308, nla_type=IFLA_INET6_STATS}, [[IPSTATS_MIB_NUM]=38, [IPSTATS_MIB_INPKTS]=4139, [IPSTATS_MIB_INOCTETS]=883673, [IPSTATS_MIB_INDELIVERS]=3952, [IPSTATS_MIB_OUTFORWDATAGRAMS]=0, [IPSTATS_MIB_OUTPKTS]=1172, [IPSTATS_MIB_OUTOCTETS]=342468, [IPSTATS_MIB_INHDRERRORS]=0, [IPSTATS_MIB_INTOOBIGERRORS]=0, [IPSTATS_MIB_INNOROUTES]=0, [IPSTATS_MIB_INADDRERRORS]=0, [IPSTATS_MIB_INUNKNOWNPROTOS]=0, [IPSTATS_MIB_INTRUNCATEDPKTS]=0, [IPSTATS_MIB_INDISCARDS]=0, [IPSTATS_MIB_OUTDISCARDS]=9, [IPSTATS_MIB_OUTNOROUTES]=0, [IPSTATS_MIB_REASMTIMEOUT]=0, [IPSTATS_MIB_REASMREQDS]=0, [IPSTATS_MIB_REASMOKS]=0, [IPSTATS_MIB_REASMFAILS]=0, [IPSTATS_MIB_FRAGOKS]=0, [IPSTATS_MIB_FRAGFAILS]=0, [IPSTATS_MIB_FRAGCREATES]=0, [IPSTATS_MIB_INMCASTPKTS]=4139, [IPSTATS_MIB_OUTMCASTPKTS]=1172, [IPSTATS_MIB_INBCASTPKTS]=0, [IPSTATS_MIB_OUTBCASTPKTS]=0, [IPSTATS_MIB_INMCASTOCTETS]=883673, [IPSTATS_MIB_OUTMCASTOCTETS]=342468, [IPSTATS_MIB_INBCASTOCTETS]=0, [IPSTATS_MIB_OUTBCASTOCTETS]=0, [IPSTATS_MIB_CSUMERRORS]=0, ...]], [{nla_len=60, nla_type=IFLA_INET6_ICMP6STATS}, [[ICMP6_MIB_NUM]=7, [ICMP6_MIB_INMSGS]=1, [ICMP6_MIB_INERRORS]=0, [ICMP6_MIB_OUTMSGS]=539, [ICMP6_MIB_OUTERRORS]=0, [ICMP6_MIB_CSUMERRORS]=0, [6 /* ICMP6_MIB_??? */]=0]], [{nla_len=20, nla_type=IFLA_INET6_TOKEN}, inet_pton(AF_INET6, "::")], [{nla_len=5, nla_type=IFLA_INET6_ADDR_GEN_MODE}, IN6_ADDR_GEN_MODE_NONE]]]]], ...]]], iov_len=8192}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 2920
+recvmsg(9, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209008, nlmsg_pid=185196}, 0], iov_len=8192}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+sendto(9, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1735209009, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+recvmsg(9, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209009, nlmsg_pid=185196}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=183, tstamp=183}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209009, nlmsg_pid=185196}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("wlp1s0")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("192.168.220.130")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("192.168.220.130")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("192.168.220.255")], [{nla_len=11, nla_type=IFA_LABEL}, "wlp1s0"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_NOPREFIXROUTE], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=2753, ifa_valid=2753, cstamp=5830557, tstamp=6370302}]]], [{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209009, nlmsg_pid=185196}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=183, tstamp=183}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209009, nlmsg_pid=185196}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("wlp1s0")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::ab3c:a333:3a60:7fb")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=5830539, tstamp=5830539}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]]], iov_len=8192}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 308
+recvmsg(9, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1735209009, nlmsg_pid=185196}, 0], iov_len=8192}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+close(9)                                = 0
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP) = 9
+setsockopt(9, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(9, {sa_family=AF_INET, sin_port=htons(5555), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EADDRINUSE (Address already in use)
+close(9)                                = 0
+futex(0x70b990834230, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+write(2, "Error binding Tree socket: ", 27Error binding Tree socket: ) = 27
+write(2, "Address already in use", 22Address already in use)  = 22
+write(2, "\n", 1
+)                       = 1
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}) = 0
+write(1, "\320\224\320\276\320\261\321\200\320\276 \320\277\320\276\320\266\320\260\320\273\320\276\320\262\320\260\321\202\321\214 "..., 85Добро пожаловать в систему управления узлами.
+) = 85
+write(1, "\320\224\320\276\321\201\321\202\321\203\320\277\320\275\321\213\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321"..., 35Доступные команды:
+) = 35
+write(1, "  create <id> [parentId]       -"..., 89  create <id> [parentId]       - Создать узел с optional родителем.
+) = 89
+write(1, "  exec <id>                    -"..., 114  exec <id>                    - Выполнить команду поиска подстроки на узле.
+) = 114
+write(1, "      \320\237\320\276\321\201\320\273\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\213 "..., 73      После команды exec введите две строки:
+) = 73
+write(1, "          > text_string\n", 24          > text_string
+) = 24
+write(1, "          > pattern_string\n", 27          > pattern_string
+) = 27
+write(1, "  heartbeat <timeMs>           -"..., 138  heartbeat <timeMs>           - Запустить мониторинг heartbeat с интервалом в миллисекундах.
+) = 138
+write(1, "  ping <id>                    -"..., 85  ping <id>                    - Проверить доступность узла.
+) = 85
+write(1, "  exit                         -"..., 45  exit                         - Выход.
+) = 45
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x70b98e200000
+mprotect(0x70b98e201000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x70b98ea00990, parent_tid=0x70b98ea00990, exit_signal=0, stack=0x70b98e200000, stack_size=0x7ffd00, tls=0x70b98ea006c0}>  => {parent_tid=[185199]}, 88) = 185199
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
