@@ -1,0 +1,25 @@
+{
+    "jobs": [
+        {
+            "id": "Job1",
+            "command": "echo 'Job1 completed successfully' > data1.txt"
+        },
+        {
+            "id": "Job2",
+            "command": "cat data1.txt > data2.txt"
+        },
+        {
+            "id": "Job3",
+            "command": "exit 1"
+        },
+        {
+            "id": "Job4",
+            "command": "echo 'Job4 should not run'"
+        }
+    ],
+    "dependencies": [
+        { "from": "Job1", "to": "Job2" },
+        { "from": "Job2", "to": "Job3" },
+        { "from": "Job3", "to": "Job4" }
+    ]
+}

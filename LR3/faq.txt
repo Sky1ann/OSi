@@ -1,0 +1,101 @@
+volatile sig_atomic_t error_signal_received = 0;
+
+Описание: Объявляет переменную-флаг для хранения состояния получения сигнала об ошибке.
+Тип: volatile sig_atomic_t гарантирует атомарность операций и предотвращает оптимизации компилятора.
+Инициализация: Устанавливается в 0 (нет сигнала).
+volatile sig_atomic_t valid_signal_received = 0;
+
+Описание: Объявляет переменную-флаг для хранения состояния получения сигнала о валидной строке.
+Тип: volatile sig_atomic_t обеспечивает безопасный доступ в обработчиках сигналов.
+Инициализация: Устанавливается в 0 (нет сигнала).
+int shm_fd = shm_open(SHM_NAME, O_CREAT | O_RDWR, 0666);
+
+Описание: Открывает или создаёт именованную область общей памяти.
+Параметры:
+SHM_NAME: Имя общей памяти (строка).
+O_CREAT | O_RDWR: Флаги для создания (если не существует) и открытия на чтение/запись.
+0666: Права доступа (чтение и запись для всех).
+Возвращает: Дескриптор файла (shm_fd) при успешном выполнении, -1 при ошибке.
+if (ftruncate(shm_fd, size) == -1) { perror("ftruncate"); shm_unlink(SHM_NAME); return EXIT_FAILURE; }
+
+ftruncate(shm_fd, size):
+Описание: Устанавливает размер области общей памяти.
+Параметры:
+shm_fd: Дескриптор общей памяти.
+size: Новый размер в байтах.
+Возвращает: 0 при успехе, -1 при ошибке.
+Блок if: Проверяет успешность ftruncate. При ошибке выводит сообщение, удаляет общую память и завершает программу с ошибкой.
+void* shared_memory = mmap(nullptr, size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+
+Описание: Отображает область общей памяти в адресное пространство процесса.
+Параметры:
+nullptr: Адрес для отображения (система выбирает).
+size: Размер отображаемой памяти.
+PROT_READ | PROT_WRITE: Права доступа (чтение и запись).
+MAP_SHARED: Общий доступ к памяти между процессами.
+shm_fd: Дескриптор общей памяти.
+0: Смещение (начало).
+Возвращает: Указатель на отображённую память (shared_memory) при успехе, MAP_FAILED при ошибке.
+Установка обработчиков сигналов:
+
+cpp
+Copy code
+struct sigaction sa_error;
+sa_error.sa_handler = signal_handler;
+sa_error.sa_flags = 0;
+sigemptyset(&sa_error.sa_mask);
+if (sigaction(SIGUSR1, &sa_error, nullptr) == -1) {
+    perror("sigaction");
+    munmap(shared_memory, size);
+    shm_unlink(SHM_NAME);
+    return EXIT_FAILURE;
+}
+
+struct sigaction sa_valid;
+sa_valid.sa_handler = valid_signal_handler;
+sa_valid.sa_flags = 0;
+sigemptyset(&sa_valid.sa_mask);
+if (sigaction(SIGUSR2, &sa_valid, nullptr) == -1) {
+    perror("sigaction");
+    munmap(shared_memory, size);
+    shm_unlink(SHM_NAME);
+    return EXIT_FAILURE;
+}
+struct sigaction sa_error; и struct sigaction sa_valid;:
+Описание: Создаёт структуры для настройки обработки сигналов.
+sa_error.sa_handler = signal_handler; и sa_valid.sa_handler = valid_signal_handler;:
+Описание: Устанавливает функции-обработчики для сигналов SIGUSR1 и SIGUSR2 соответственно.
+sa_error.sa_flags = 0; и sa_valid.sa_flags = 0;:
+Описание: Устанавливает флаги обработки сигналов (отсутствуют дополнительные флаги).
+sigemptyset(&sa_error.sa_mask); и sigemptyset(&sa_valid.sa_mask);:
+Описание: Инициализирует набор масок сигналов как пустой, блокируя никакие сигналы во время обработки.
+sigaction(SIGUSR1, &sa_error, nullptr) и sigaction(SIGUSR2, &sa_valid, nullptr):
+Описание: Устанавливает обработчики для сигналов SIGUSR1 и SIGUSR2.
+Параметры:
+SIGUSR1 / SIGUSR2: Номер сигнала.
+&sa_error / &sa_valid: Указатель на структуру sigaction.
+nullptr: Игнорирует старые настройки.
+Возвращает: 0 при успехе, -1 при ошибке.
+int shm_fd = shm_open(shm_name.c_str(), O_RDWR, 0666);
+
+Описание: Открывает существующую именованную область общей памяти.
+Параметры:
+shm_name.c_str(): Имя общей памяти (строка).
+O_RDWR: Открытие на чтение и запись.
+0666: Права доступа (используются только при создании).
+Возвращает: Дескриптор файла (shm_fd) при успешном выполнении, -1 при ошибке.
+memset(shared_memory, 0, size);
+
+Описание: Заполняет область общей памяти нулями.
+Параметры:
+shared_memory: Указатель на область памяти.
+0: Значение для заполнения.
+size: Количество байтов для заполнения.
+Возвращает: Указатель на shared_memory.
+munmap(shared_memory, size);
+
+Описание: Снимает отображение общей памяти из адресного пространства процесса.
+Параметры:
+shared_memory: Указатель на отображённую память.
+size: Размер отображения.
+Возвращает: 0 при успехе, -1 при ошибке.

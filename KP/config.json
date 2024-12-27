@@ -1,0 +1,25 @@
+{
+    "jobs": [
+        {
+            "id": "Job1",
+            "command": "echo 'Data from Job1' > data1.txt"
+        },
+        {
+            "id": "Job2",
+            "command": "cat data1.txt > data2.txt"
+        },
+        {
+            "id": "Job3",
+            "command": "cat data2.txt > data3.txt"
+        },
+        {
+            "id": "Job4",
+            "command": "cat data3.txt"
+        }
+    ],
+    "dependencies": [
+        { "from": "Job1", "to": "Job2" },
+        { "from": "Job2", "to": "Job3" },
+        { "from": "Job3", "to": "Job4" }
+    ]
+}

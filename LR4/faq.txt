@@ -1,0 +1,22 @@
+g++ -fPIC -shared -o libternary_quick.so translation_ternary.cpp
+g++ -fPIC -shared -o libbinary_bubble.so translation_binary.cpp
+g++ — компилятор C++.
+-fPIC — генерирует позиционно-независимый код (Position Independent Code), необходимый для создания динамических библиотек.
+-shared — указывает, что нужно создать динамическую библиотеку.
+-o libbinary_bubble.so — задает имя выходного файла библиотеки.
+translation_binary.cpp — исходный файл с кодом библиотеки.
+
+
+g++ -o program_linked main_linked.cpp -L. -lbinary_bubble
+-o program_linked — указывает имя выходного исполняемого файла.
+main_linked.cpp — исходный файл программы.
+-L. — добавляет текущий каталог . в список каталогов для поиска библиотек.
+-lbinary_bubble — линковка с библиотекой libbinary_bubble.so. Префикс lib и суффикс .so опускаются.
+
+
+g++ -o program_dynamic main_dynamic.cpp -ldl
+-o program_dynamic — задает имя выходного файла.
+main_dynamic.cpp — исходный файл программы.
+-ldl — опция для линковки с библиотекой libdl, необходимой для использования функций dlopen, dlsym, dlclose.
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.

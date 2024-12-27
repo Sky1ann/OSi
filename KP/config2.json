@@ -1,0 +1,45 @@
+{
+    "jobs": [
+        {
+            "id": "1",
+            "command": "echo 'done 1'"
+        },
+        {
+            "id": "2",
+            "command": "echo 'done 2'"
+        },
+        {
+            "id": "3",
+            "command": "echo 'done 3'"
+        },
+        {
+            "id": "4",
+            "command": "echo 'done 4'"
+        },
+        {
+            "id": "5",
+            "command": "echo 'done 5'"
+        },
+        {
+            "id": "6",
+            "command": "echo 'done 6'"
+        },
+        {
+            "id": "7",
+            "command": "echo 'done 7'"
+        },
+        {
+            "id": "8",
+            "command": "echo 'done 8'"
+        }
+    ],
+    "dependencies": [
+        { "from": "1", "to": "5" },
+        { "from": "2", "to": "5" },
+        { "from": "3", "to": "6" },
+        { "from": "4", "to": "6" },
+        { "from": "5", "to": "6" },
+        { "from": "6", "to": "8" },
+        { "from": "7", "to": "8" }
+    ]
+}
